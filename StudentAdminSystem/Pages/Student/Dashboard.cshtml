@@ -1,0 +1,23 @@
+﻿@page
+@model StudentDashboardModel
+@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+/* NEW FILE - Student Dashboard (safe static content)
+   - NEW file. Simple placeholder so /Student/Dashboard loads.
+*/
+
+<h2>Student Dashboard (Demo)</h2>
+
+<p>Welcome! This is a safe student dashboard page so the Student area exists.</p>
+
+<p>
+    <a class="btn btn-primary" asp-page="/Products/Index">Browse Products</a>
+    <a class="btn btn-secondary" asp-page="/Reservations/Index">My Reservations</a>
+</p>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success mt-3">@TempData["Message"]</div>
+}

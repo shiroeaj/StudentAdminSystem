@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<!-- REPLACED / FIXED: The previous ItemGroup block was corrupted.
+       Added proper <ItemGroup> wrapper and cleaned invalid XML.
+       This block removes specific folders if you still want exclusions.
+  -->
+	<ItemGroup>
+		<!-- NEW: Properly formatted removals -->
+		<Compile Remove="Repositories\**" />
+		<Content Remove="Repositories\**" />
+		<None Remove="Repositories\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+		<PackageReference Include="MailKit" Version="4.7.1" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
+		<PackageReference Include="MongoDB.Driver" Version="2.23.1" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0" />
+		<PackageReference Include="QuestPDF" Version="2024.12.1" />
+	</ItemGroup>
+
+</Project>
+

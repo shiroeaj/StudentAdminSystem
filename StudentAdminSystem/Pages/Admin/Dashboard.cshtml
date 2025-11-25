@@ -1,0 +1,27 @@
+﻿@page
+@model AdminDashboardModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+/* NEW FILE - Admin Dashboard (safe static content)
+   - This file is NEW and will not overwrite any existing Admin file.
+*/
+
+<h2>Admin Dashboard (Demo)</h2>
+
+<p>
+    This is the Admin dashboard. If you have an Admin area implemented elsewhere,
+    this placeholder ensures the Admin route exists and displays.
+</p>
+
+<div class="mt-3">
+    <a class="btn btn-primary" asp-page="/Products/Index">View Products</a>
+    <a class="btn btn-secondary" asp-page="/Orders/Index">View Orders</a>
+    <a class="btn btn-secondary" asp-page="/Reservations/Index">View Reservations</a>
+</div>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info mt-3">@TempData["Message"]</div>
+}
